@@ -6,6 +6,8 @@ const age = () => {
   )
 }
 
+//test
+
 export default age
 
 //質問2（年齢）
