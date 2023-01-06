@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ComponentA from "./component/ComponentA";
-import ComponentB from "./component/ComponentB";
+import ComponentA from "./ComponentA";
+import ComponentB from "./ComponentB";
 
 const Routers = () => {
     return (
