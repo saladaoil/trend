@@ -6,7 +6,8 @@ const Gender = () => {
     return (
         <div>
             <p>性別選択</p>
-            <button onClick={() => navigate('/componentb')}>画面遷移します！</button>
+            <button onClick={() => navigate('/componentb')}>男</button>
+            <button onClick={() => navigate('/componentb')}>女</button>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ComponentA from "./ComponentA";
+import ComponentA from "./components/gender";
 import ComponentB from "./ComponentB";
 
 const Routers = () => {
