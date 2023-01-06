@@ -9,7 +9,7 @@ class App extends React.Component {
     return(
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={page1} />　//URLのパスが'/'のみの時にpage1を表示する
+          <Route exact path="/" component={page1} />
         </Switch>
       </BrowserRouter>
     );
