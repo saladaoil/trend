@@ -8,5 +8,6 @@ const ComponentB = () => {
             <button onClick={() => navigate('/')}>画面遷移します！</button>
         </div>
     )
+
 }
 export default ComponentB

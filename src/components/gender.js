@@ -3,49 +3,74 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useNavigate } from "react-router-dom"
 
+
+
 const Gender = () => {
-  /*　男女　ページ遷移
-    const navigate = useNavigate()
+
+  
+  
+    // データ
+    const items = ['アイテム１', 'アイテム２', 'アイテム３', 'その他'];
+  
+    // 選択した値を管理（初期値：ラジオ１）
+    const [val, setVal] = React.useState('アイテム１');
+
+    
+  
+    // ラジオボタンの値がチェンジされた時
+    const handleChange = (e) => {
+      setVal(e.target.value);
+    };
+  
     return (
-        <div>          
-            <p>性別選択</p>
-            <button onClick={() => navigate('/componentb')}>男</button>
-            <button onClick={() => navigate('/componentb')}>決定</button>
-            
+      <>
+        <h2>ラジオボタン</h2>
+        <p className="center">「その他」を選択したら入力欄が表示されます</p>
+        <div className="container">
+          {items.map((item) => {
+            return (
+              <div key={item}>
+                <input
+                  id={item}
+                  type="radio"
+                  value={item}
+                  onChange={handleChange}
+                  checked={item === val}
+                />
+                <label htmlFor={item}>{item}</label>
+              </div>
+            );
+          })}
+  
+          <p>選択したのは「{val}」です。</p>
+          {val === 'その他' && (
+            <p>
+              <input type="text" />
+            </p>
+          )}
         </div>
-    )
-  */
-    function App() {
-      const [val, setVal] = React.useState('cat');
+
+        <div>
+            <p>ComponentA</p>
+            <button onClick={() => Gender('/componentb')}>決定</button>
+        </div>
+
+
+      </>
+    );
+
+
+
+
+  };
+
+
+  
+  ReactDOM.render(<Gender />, document.getElementById('root'))
     
-      const handleChange = e => setVal(e.target.value);
     
-      return (
-        <>
-          <label>
-            <input
-              type="radio"
-              value="cat"
-              onChange={handleChange}
-              checked={val === 'cat'}
-            />
-            猫派
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="dog"
-              onChange={handleChange}
-              checked={val === 'dog'}
-            />
-            犬派
-          </label>
-          <p>選択値：{val}</p>
-        </>
-      );
-    }
-    
-    const root = document.getElementById('root');
-    ReactDOM.render(<App />, root);
-}
+
+
+
+
 export default Gender
