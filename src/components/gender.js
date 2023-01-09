@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom"
 
 
 const Gender = () => {
-
-  
   
     // データ
     const items = ['アイテム１', 'アイテム２', 'アイテム３', 'その他'];
@@ -39,20 +37,28 @@ const Gender = () => {
                 />
                 <label htmlFor={item}>{item}</label>
               </div>
-            );
-          })}
-  
-          <p>選択したのは「{val}」です。</p>
-          {val === 'その他' && (
-            <p>
-              <input type="text" />
-            </p>
-          )}
-        </div>
+              
 
-        <div>
-            <p>ComponentA</p>
-            <button onClick={() => Gender('/componentb')}>決定</button>
+
+
+            );
+
+            
+
+
+          }
+          
+          
+          
+          )
+
+          
+          
+          
+          }
+                        <button onClick={() => Gender('/componentb')}>決定</button>
+  
+
         </div>
 
 
