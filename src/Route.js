@@ -1,12 +1,10 @@
 import Routers from './Routers';
-
-
-const App = () => {
+const Route = () => {
   return (
-    <div className="App">
+    <div className="Route">
       <Routers/>
     </div>
   );
 }
 
-export default App;
+export default Route;
